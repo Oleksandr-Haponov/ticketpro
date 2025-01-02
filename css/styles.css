@@ -1,20 +1,22 @@
 :root {
     --font-size-xxs: 12px;
     /* Дуже маленький */
-    --font-size-xs: 16px;
+    --font-size-xs: 14px;
     /* Маленький */
-    --font-size-sm: 20px;
+    --font-size-sm: 16px;
     /* Середній */
-    --font-size-md: 24px;
+    --font-size-md: 20px;
     /* Трохи більше середнього */
+    --font-size-lg: 24px;
+    /* Великий */
     --font-size-logo: 25.47px;
     /* Розмір для логотипу */
-    --font-size-lg: 32px;
-    /* Великий */
-    --font-size-xl: 44px;
+    --font-size-xl: 32px;
     /* Дуже великий */
-    --font-size-xxl: 48px;
+    --font-size-xxl: 44px;
     /* Максимальний */
+    --font-size-xxxl: 48px;
+    /* Найбільший */
 }
 
 body {
@@ -37,13 +39,14 @@ body {
     font-size: var(--font-size-md);
 }
 
+.font-lg {
+    font-size: var(--font-size-lg);
+}
+
 .font-logo {
     font-size: var(--font-size-logo);
     font-weight: bold;
-}
-
-.font-lg {
-    font-size: var(--font-size-lg);
+    /* Опціонально */
 }
 
 .font-xl {
@@ -53,3 +56,36 @@ body {
 .font-xxl {
     font-size: var(--font-size-xxl);
 }
+
+.font-xxxl {
+    font-size: var(--font-size-xxxl);
+}
+
+.btn-login {
+    font-size: 14px;
+    /* Розмір тексту */
+    font-family: 'Open Sans', sans-serif;
+    /* Шрифт */
+    color: #383B4F;
+    /* Колір тексту */
+    background-color: #fff;
+    /* Колір фону */
+    border: 1.5px solid #383B4F;
+    /* Рамка 1,5px */
+    border-radius: 100px;
+    /* Закруглені кути */
+    padding: 10px 20px;
+    /* Внутрішній відступ */
+    cursor: pointer;
+    /* Курсор у вигляді руки */
+    transition: all 0.3s ease;
+    /* Анімація */
+}
+
+.btn-login:hover {
+    background-color: #fff;
+    /* Колір фону при наведенні */
+    color: #655ADC;
+    /* Колір тексту при наведенні */
+    border-color: #655ADC;
+    /* Колір рамки при наведенні */
