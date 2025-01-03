@@ -61,31 +61,112 @@ body {
     font-size: var(--font-size-xxxl);
 }
 
+/* Загальний стиль для шапки */
+.header {
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+/* Верхня лінія */
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    /* Логотип зліва, текст і кнопка справа */
+    align-items: center;
+    background-color: #383B4F;
+    /* Колір фону верхньої лінії */
+    color: #fff;
+    /* Колір тексту */
+    padding: 10px 20px;
+    height: 80px;
+    /* Висота верхньої лінії */
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    /* Тінь */
+}
+
+/* Ліва частина з логотипом */
+.top-line-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 25px;
+    /* Ширина логотипа */
+    height: 25px;
+    /* Висота логотипа */
+    margin-right: 8px;
+    /* Відступ між логотипом і текстом */
+}
+
+.logo-text {
+    font-size: 25,47px;
+    /* Розмір тексту логотипа */
+    font-weight: bold;
+    /* Жирний текст */
+}
+
+/* Права частина з текстом і кнопкою */
+.top-line-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Відстань між текстом і кнопкою */
+}
+
+.top-line-text {
+    font-size: 14px;
+    margin: 0;
+    /* Забираємо зайві відступи */
+}
+
 .btn-login {
     font-size: 14px;
-    /* Розмір тексту */
     font-family: 'Open Sans', sans-serif;
-    /* Шрифт */
     color: #383B4F;
-    /* Колір тексту */
     background-color: #fff;
-    /* Колір фону */
     border: 1.5px solid #383B4F;
-    /* Рамка 1,5px */
     border-radius: 100px;
-    /* Закруглені кути */
     padding: 10px 20px;
-    /* Внутрішній відступ */
     cursor: pointer;
-    /* Курсор у вигляді руки */
     transition: all 0.3s ease;
-    /* Анімація */
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-login img {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease;
+    /* Анімація для іконки */
+    filter: invert(0);
+    /* Початковий колір */
+}
+
+.btn-login:hover img {
+    filter: invert(1);
+    /* Зміна кольору при наведенні */
 }
 
 .btn-login:hover {
-    background-color: #fff;
-    /* Колір фону при наведенні */
     color: #655ADC;
-    /* Колір тексту при наведенні */
+    /* Колір тексту */
     border-color: #655ADC;
-    /* Колір рамки при наведенні */
+    /* Колір рамки */
+}
+
+.button {
+    padding: 10px 20px;
+    /* Внутрішній відступ (розмір кнопки) */
+    margin-left: 30px;
+    /* Відступ ліворуч від інших елементів */
+    border-radius: 5px;
+    /* Закруглені кути */
+    cursor: pointer;
+    /* Курсор у вигляді руки */
+    font-size: 14px;
+    /* Розмір тексту кнопки */
+    }
