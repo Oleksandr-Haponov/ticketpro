@@ -110,7 +110,7 @@ body {
 
 /* Смена иконки при наведении */
 .btn-login:hover .btn-icon {
-  content: url("/favicon/iconamoon_profile-bold.png"); /* Новая иконка при наведении */
+  content: url("/favicon/iconamoon_profile-bold-2.jpg"); /* Новая иконка при наведении */
 }
 
 .btn-login:hover {
