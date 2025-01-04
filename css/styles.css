@@ -118,8 +118,38 @@ body {
   }
 
   .btn-login {
-    width: 100%; /* Кнопка занимает всю ширину */
-    justify-content: center; /* Центрируем содержимое кнопки */
+    width: 106px; /* Ширина кнопки */
+    height: 44px; /* Высота кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    gap: 12px; /* Расстояние между текстом и иконкой */
+    font-size: var(--font-size-xs); /* Размер текста */
+    font-family: "Open Sans", sans-serif; /* Шрифт */
+    color: #383b4f; /* Цвет текста */
+    background-color: #fff; /* Цвет фона */
+    border-radius: 100px 0px 0px 0px; /* Закругление углов */
+    border: 1.5px solid transparent; /* Граница кнопки (прозрачная, чтобы избежать артефактов) */
+    cursor: pointer; /* Указатель мыши */
+    transition: all 0.3s ease; /* Плавный переход при наведении */
+    display: flex; /* Горизонтальное расположение содержимого */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование содержимого */
+    opacity: 0; /* Прозрачность кнопки */
+  }
+
+  .btn-login:hover {
+    opacity: 1; /* Делает кнопку видимой при наведении */
+    border-color: #655adc; /* Цвет рамки при наведении */
+    color: #655adc; /* Цвет текста при наведении */
+  }
+  /* Исправил высоту иконки с 20 на 24 */
+  .btn-login .btn-icon {
+    width: 24px; /* Ширина иконки */
+    height: 24px; /* Высота иконки */
+    transition: all 0.3s ease;
+  }
+
+  .btn-login:hover .btn-icon {
+    content: url("/favicon/iconamoon_profile-bold.png"); /* Новая иконка при наведении */
   }
 
   .logo-text {
