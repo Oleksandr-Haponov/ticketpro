@@ -1,172 +1,135 @@
 :root {
-    --font-size-xxs: 12px;
-    /* Дуже маленький */
-    --font-size-xs: 14px;
-    /* Маленький */
-    --font-size-sm: 16px;
-    /* Середній */
-    --font-size-md: 20px;
-    /* Трохи більше середнього */
-    --font-size-lg: 24px;
-    /* Великий */
-    --font-size-logo: 25.47px;
-    /* Розмір для логотипу */
-    --font-size-xl: 32px;
-    /* Дуже великий */
-    --font-size-xxl: 44px;
-    /* Максимальний */
-    --font-size-xxxl: 48px;
-    /* Найбільший */
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 20px;
+  --font-size-lg: 24px;
+  --font-size-logo: 25.47px; /* Размер текста "TicketPro" */
+  --font-size-xl: 32px;
+  --font-size-xxl: 44px;
+  --font-size-xxxl: 48px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-xxs: 10px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 18px;
+    --font-size-lg: 22px;
+    --font-size-logo: 20px; /* Размер текста "TicketPro" в мобильной версии */
+    --font-size-xl: 28px;
+    --font-size-xxl: 36px;
+    --font-size-xxxl: 42px;
+  }
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.font-xxs {
-    font-size: var(--font-size-xxs);
-}
-
-.font-xs {
-    font-size: var(--font-size-xs);
-}
-
-.font-sm {
-    font-size: var(--font-size-sm);
-}
-
-.font-md {
-    font-size: var(--font-size-md);
-}
-
-.font-lg {
-    font-size: var(--font-size-lg);
-}
-
-.font-logo {
-    font-size: var(--font-size-logo);
-    font-weight: bold;
-    /* Опціонально */
-}
-
-.font-xl {
-    font-size: var(--font-size-xl);
-}
-
-.font-xxl {
-    font-size: var(--font-size-xxl);
-}
-
-.font-xxxl {
-    font-size: var(--font-size-xxxl);
-}
-
-/* Загальний стиль для шапки */
-.header {
-    width: 100%;
-    background-color: #f8f9fa;
-}
-
-/* Верхня лінія */
-.top-line {
-    display: flex;
-    justify-content: space-between;
-    /* Логотип зліва, текст і кнопка справа */
-    align-items: center;
-    background-color: #383B4F;
-    /* Колір фону верхньої лінії */
-    color: #fff;
-    /* Колір тексту */
-    padding: 10px 20px;
-    height: 80px;
-    /* Висота верхньої лінії */
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
-    /* Тінь */
-}
-
-/* Ліва частина з логотипом */
-.top-line-left {
-    display: flex;
-    align-items: center;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
-    width: 25px;
-    /* Ширина логотипа */
-    height: 25px;
-    /* Висота логотипа */
-    margin-right: 8px;
-    /* Відступ між логотипом і текстом */
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
 }
 
 .logo-text {
-    font-size: 25,47px;
-    /* Розмір тексту логотипа */
-    font-weight: bold;
-    /* Жирний текст */
+  font-size: var(--font-size-logo); /* Используем переменную для размера */
+  font-weight: bold; /* Жирный шрифт */
+  color: #383b4f; /* Цвет текста по умолчанию */
 }
 
-/* Права частина з текстом і кнопкою */
+/* Футер: белый текст "TicketPro" */
+.footer .logo-text {
+  color: #fff;
+}
+
+/* Хедер */
+.header {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-line-left {
+  display: flex;
+  align-items: center;
+}
+
 .top-line-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    /* Відстань між текстом і кнопкою */
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.top-line-text {
-    font-size: 14px;
-    margin: 0;
-    /* Забираємо зайві відступи */
-}
-
+/* Кнопка в хедере */
 .btn-login {
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    color: #383B4F;
-    background-color: #fff;
-    border: 1.5px solid #383B4F;
-    border-radius: 100px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+  font-size: var(--font-size-xs);
+  font-family: "Open Sans", sans-serif;
+  color: #383b4f;
+  background-color: #fff;
+  border: 1.5px solid #383b4f;
+  border-radius: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.btn-login img {
-    width: 25px;
-    height: 25px;
-    transition: all 0.3s ease;
-    /* Анімація для іконки */
-    filter: invert(0);
-    /* Початковий колір */
+.btn-login .btn-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
 }
 
-.btn-login:hover img {
-    filter: invert(1);
-    /* Зміна кольору при наведенні */
+/* Смена иконки при наведении */
+.btn-login:hover .btn-icon {
+  content: url("/favicon/iconamoon_profile-bold.png"); /* Новая иконка при наведении */
 }
 
 .btn-login:hover {
-    color: #655ADC;
-    /* Колір тексту */
-    border-color: #655ADC;
-    /* Колір рамки */
+  color: #655adc;
+  border-color: #655adc;
 }
 
-.button {
-    padding: 10px 20px;
-    /* Внутрішній відступ (розмір кнопки) */
-    margin-left: 30px;
-    /* Відступ ліворуч від інших елементів */
-    border-radius: 5px;
-    /* Закруглені кути */
-    cursor: pointer;
-    /* Курсор у вигляді руки */
-    font-size: 14px;
-    /* Розмір тексту кнопки */
-    }
+/* Футер */
+.footer {
+  width: 100%;
+  background-color: #383b4f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .logo {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-text {
+  font-size: var(--font-size-xs);
+  margin-top: 10px;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #bbbbbb;
+}

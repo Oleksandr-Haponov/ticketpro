@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <!--HTML code for the main page-->
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketPro</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <!-- Сайт -->
   <body>
     <!-- Секція Header -->
-    <header>
-      <section>
+    <header class="header">
+      <div class="top-line">
         <!-- Логотип -->
-        <img
-          src="./images/ticketpro-logo.png"
-          alt="TicketPro"
-          width="25"
-          height="25"
-        />
-        <a href="/index.html" class="font-lg">TicketPro</a>
-      </section>
-      <!-- Верхнє меню -->
-      <section>
-        <nav>
-          <ul>
+        <div class="logo-container">
+          <img
+            src="./images/ticketpro-header-logo.png"
+            alt="TicketPro"
+            class="logo logo-header"
+          />
+          <p class="logo-text">TicketPro</p>
+        </div>
+        <!-- Верхнє меню -->
+        <nav class="top-menu">
+          <ul class="menu-list">
             <li><a href="/carrier.html" class="font-xs">Перевізникам</a></li>
             <li><a href="/agent.html" class="font-xs">Агентам</a></li>
             <li><a href="/news.html" class="font-xs">Новини</a></li>
           </ul>
         </nav>
-      </section>
-      <!-- Кнопка в Header-->
-      <section>
+        <!-- Кнопка в Header -->
         <button class="btn-login">
-          <img src="/icons/iconamoon_profile-bold.svg" alt="іконка вхід" />
-          вхід
+          <img
+            src="/favicon/iconamoon_profile-bold-2.png"
+            alt="Іконка Вхід"
+            class="btn-icon"
+          />
+          Вхід
         </button>
-      </section>
+      </div>
     </header>
+
+    <!-- Основний контент -->
     <main>
       <!-- Секція №1 -->
-      <section>
-        <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
+      <section class="hero">
+        <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
         <h1 class="font-xxl">
           Професійна CRM система для перевізників та агентів
         </h1>
@@ -53,15 +59,15 @@
         </p>
       </section>
       <!-- Секція №2 -->
-      <section>
-        <ul>
+      <section class="features">
+        <ul class="feature-list">
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
             <h2 class="font-xl">Керуйте перевезеннями</h2>
             <p class="font-sm">Зручна система керування рейсами, автопарком</p>
           </li>
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
             <h2 class="font-xl">Продавайте квитки</h2>
             <p class="font-sm">
               Велика мережа перевізників та зручна система продажів квитків
@@ -70,35 +76,35 @@
         </ul>
       </section>
       <!-- Секція №3 -->
-      <h2 class="font-xxl">Чому TicketPro?</h2>
-      <section>
-        <ul>
+      <section class="why-us">
+        <h2 class="font-xxl">Чому TicketPro?</h2>
+        <ul class="reason-list">
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
-            <h3 class="font-xxl">Експертність</h3>
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
+            <h3 class="font-xl">Експертність</h3>
             <p class="font-sm">
               Вже більше 15 років ми з’єднуємо перевізників, агентів та
               пасажирів
             </p>
           </li>
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
-            <h3 class="font-xxl">Ефективність</h3>
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
+            <h3 class="font-xl">Ефективність</h3>
             <p class="font-sm">
               Зібрали всі необхідні інструменти для ефективного управління в
               одній системі
             </p>
           </li>
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
-            <h3 class="font-xxl">Команда</h3>
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
+            <h3 class="font-xl">Команда</h3>
             <p class="font-sm">
               На вашому боці - команда професіоналів, що завжди на зв’язку
             </p>
           </li>
           <li>
-            <img src="/images/group-45.jpg" alt="Автобус і ноубук" />
-            <h3>Універсальність</h3>
+            <img src="/images/group-45.jpg" alt="Автобус і ноутбук" />
+            <h3 class="font-xl">Універсальність</h3>
             <p class="font-sm">
               Співпрацюємо з перевізникам та агентами незалежно від розміру
               бізнесу
@@ -106,31 +112,32 @@
           </li>
         </ul>
       </section>
-      <!-- Секція SEO текст -->
-      <p class="font-xxs">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo
-        illo ad, totam natus culpa laudantium quis iste dolorum quasi
-        exercitationem suscipit placeat doloribus labore sequi omnis inventore
-        aspernatur rem.
-      </p>
+      <!-- Секція SEO -->
+      <section class="seo-text">
+        <p class="font-xxs">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo
+          illo ad, totam natus culpa laudantium quis iste dolorum quasi
+          exercitationem suscipit placeat doloribus labore sequi omnis inventore
+          aspernatur rem.
+        </p>
+      </section>
     </main>
+
     <!-- Секція Footer -->
-    <footer>
-      <img
-        src="/images/ticketpro-logo.png"
-        alt="TicketPro"
-        width="25"
-        height="25"
-      />
-      <a href="/index.html" class="font-lg">TicketPro</a>
-      <p class="font-xxs">Професійна CRM системадля перевізників та агентів</p>
-      <p class="font-xxs">TicketPro 2024. Всі права захищено.</p>
-      <nav>
-        <ul>
-          <!-- Перший пункт списку -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <img
+          src="/images/ticketpro-footer-logo.png"
+          alt="TicketPro"
+          class="logo logo-footer"
+        />
+        <p class="logo-text">TicketPro</p>
+      </div>
+      <p class="font-xxs">&copy; TicketPro 2024. Всі права захищено.</p>
+      <nav class="footer-menu">
+        <ul class="menu-list">
           <li><a href="/carrier.html" class="font-xs">Перевізникам</a></li>
           <li><a href="/agent.html" class="font-xs">Агентам</a></li>
-          <!-- Другий пункт списку -->
           <li>
             <a href="/public-offer-agreement.html" class="font-xs"
               >Договір публічної оферти</a
@@ -141,7 +148,6 @@
               >Політика конфіденційності</a
             >
           </li>
-          <!-- Третій пункт списку -->
           <li><a href="/about.html" class="font-xs">Про нас</a></li>
           <li><a href="/contacts.html" class="font-xs">Контакти</a></li>
         </ul>
