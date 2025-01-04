@@ -30,23 +30,6 @@ body {
   padding: 0;
 }
 
-.logo {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-}
-
-.logo-text {
-  font-size: var(--font-size-logo); /* Используем переменную для размера */
-  font-weight: bold; /* Жирный шрифт */
-  color: #383b4f; /* Цвет текста по умолчанию */
-}
-
-/* Футер: белый текст "TicketPro" */
-.footer .logo-text {
-  color: #fff;
-}
-
 /* Хедер */
 .header {
   width: 100%;
@@ -56,23 +39,54 @@ body {
 }
 
 .top-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Горизонтальное выравнивание элементов */
+  justify-content: space-between; /* Равномерное распределение */
+  align-items: center; /* Выравнивание по вертикали */
+  padding: 10px 20px;
 }
 
-.top-line-left {
-  display: flex;
-  align-items: center;
+.logo-container {
+  display: flex; /* Логотип и текст в одну строку */
+  align-items: center; /* Выравнивание по центру */
+  gap: 10px; /* Расстояние между логотипом и текстом */
 }
 
-.top-line-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.logo {
+  width: 25px;
+  height: 25px;
 }
 
-/* Кнопка в хедере */
+.logo-text {
+  font-size: var(--font-size-logo); /* Размер текста "TicketPro" */
+  font-weight: bold; /* Жирный текст */
+  color: #383b4f; /* Цвет текста */
+}
+
+/* Меню */
+.top-menu {
+  display: flex; /* Контейнер меню */
+  gap: 20px; /* Отступы между пунктами меню */
+}
+
+.menu-list {
+  display: flex; /* Меню в строку */
+  list-style: none; /* Убираем маркеры списка */
+  margin: 0; /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+.menu-list li a {
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: var(--font-size-xs);
+  color: #383b4f; /* Цвет текста */
+  transition: color 0.3s ease; /* Плавный эффект изменения цвета */
+}
+
+.menu-list li a:hover {
+  color: #655adc; /* Цвет текста при наведении */
+}
+
+/* Кнопка "Вхід" */
 .btn-login {
   font-size: var(--font-size-xs);
   font-family: "Open Sans", sans-serif;
@@ -83,9 +97,9 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  display: flex; /* Горизонтальное расположение текста и иконки */
+  align-items: center; /* Выравнивание по центру */
+  gap: 10px; /* Расстояние между иконкой и текстом */
 }
 
 .btn-login .btn-icon {
@@ -107,7 +121,7 @@ body {
 /* Футер */
 .footer {
   width: 100%;
-  background-color: #383b4f;
+  background-color: #202435;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -118,18 +132,38 @@ body {
   height: 25px;
 }
 
+.footer .logo-text {
+  font-size: var(--font-size-logo);
+  color: #fff;
+}
+
 .footer-text {
   font-size: var(--font-size-xs);
   margin-top: 10px;
   color: #fff;
 }
 
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Стили для меню в футере */
+.footer-menu {
+  margin-top: 20px;
 }
 
-.footer a:hover {
-  color: #bbbbbb;
+.footer-menu .menu-list {
+  display: flex; /* Выравниваем пункты меню в одну строку */
+  justify-content: center; /* Центруем меню */
+  gap: 20px; /* Расстояние между пунктами меню */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu .menu-list li a {
+  color: #fff; /* Белый цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: var(--font-size-xs); /* Размер текста */
+  transition: color 0.3s ease; /* Плавный эффект изменения цвета */
+}
+
+.footer-menu .menu-list li a:hover {
+  color: #bbbbbb; /* Серый цвет при наведении */
 }
