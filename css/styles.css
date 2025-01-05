@@ -1,33 +1,111 @@
 :root {
-  --font-size-xxs: 12px;
-  --font-size-xs: 14px;
-  --font-size-sm: 16px;
-  --font-size-md: 20px;
-  --font-size-lg: 24px;
-  --font-size-logo: 25.47px; /* Размер текста "TicketPro" */
+  /* Размеры шрифтов */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-logo: 25.47px;
+  --font-size-32: 32px;
+  --font-size-44: 44px;
+  --font-size-48: 48px;
 }
 
+/* Варианты начертания */
+--font-weight-regular: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+--font-weight-bold: 700;
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-12: 10px;
+    --font-size-14: 12px;
+    --font-size-16: 14px;
+    --font-size-20: 18px;
+    --font-size-24: 22px;
+    --font-size-logo: 20px;
+    --font-size-32: 28px;
+    --font-size-44: 36px;
+    --font-size-48: 42px;
+  }
+}
+
+/* Классы для размеров текста */
+.font-12 {
+  font-size: var(--font-size-12);
+}
+
+.font-14 {
+  font-size: var(--font-size-14);
+}
+
+.font-16 {
+  font-size: var(--font-size-16);
+}
+
+.font-20 {
+  font-size: var(--font-size-20);
+}
+
+.font-24 {
+  font-size: var(--font-size-24);
+}
+
+.font-logo {
+  font-size: var(--font-size-logo);
+}
+
+.font-32 {
+  font-size: var(--font-size-32);
+}
+
+.font-44 {
+  font-size: var(--font-size-44);
+}
+
+.font-48 {
+  font-size: var(--font-size-48);
+}
+
+html,
 body {
-  font-family: "Open Sans", sans-serif;
+  width: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Хедер */
 .header {
   width: 100%;
-  background-color: #f8f9fa;
-  padding: 10px 20px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  margin: 0; /* Убираем центрирование */
+  background-color: #ffffff;
+  padding: 0px 0px;
 }
 
+/* Адаптивность */
 .top-line {
-  display: flex; /* Горизонтальное выравнивание элементов */
-  justify-content: space-between; /* Равномерное распределение */
-  align-items: center; /* Центрирование по вертикали */
+  width: 100%; /* Полная ширина экрана */
+  height: 80px;
+  background-color: #ffffff;
+  margin: 0; /* Убираем центрирование */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
-  flex-wrap: wrap; /* Перенос на новые строки для мобильных устройств */
-  gap: 20px; /* Отступы между основными блоками (логотип, меню, кнопка) */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .top-line {
+    padding: 5px 10px;
+  }
 }
 
 /* Логотип */
@@ -44,7 +122,7 @@ body {
 
 .logo-text {
   font-size: var(--font-size-logo); /* Размер текста логотипа */
-  font-weight: bold; /* Жирный текст */
+  font-weight: 700; /* Жирный текст */
   color: #383b4f; /* Цвет текста логотипа */
 }
 
@@ -59,11 +137,13 @@ body {
   list-style: none; /* Убираем маркеры списка */
   margin: 0; /* Убираем внешние отступы */
   padding: 0; /* Убираем внутренние отступы */
+  gap: 15px; /* Уменьшенные отступы между пунктами */
 }
 
 .menu-list li a {
   text-decoration: none; /* Убираем подчеркивание ссылок */
-  font-size: var(--font-size-xs); /* Размер текста */
+  font-size: var(--font-size-14); /* Размер текста */
+  font-weight: 600; /* Полужирный текст */
   color: #383b4f; /* Цвет текста */
   transition: color 0.3s ease; /* Плавный переход цвета */
 }
@@ -71,108 +151,62 @@ body {
 .menu-list li a:hover {
   color: #655adc; /* Цвет текста при наведении */
 }
-
-/* Кнопка "Вхід" */
+/* Кнопка в меню */
 .btn-login {
-  font-size: var(--font-size-xs); /* Размер текста кнопки */
-  font-family: "Open Sans", sans-serif;
-  color: #383b4f;
-  background-color: #fff;
-  border: 1.5px solid #383b4f; /* Рамка кнопки */
-  border-radius: 100px; /* Закругленные края */
+  width: 106px; /* Ширина кнопки */
+  height: 44px; /* Высота кнопки */
   padding: 10px 20px; /* Внутренние отступы */
-  cursor: pointer; /* Указатель на кнопку */
-  transition: all 0.3s ease; /* Плавная анимация */
+  gap: 12px; /* Расстояние между текстом и иконкой */
+  font-size: var(--font-size-14); /* Размер текста */
+  font-weight: 600; /* Полужирный текст */
+  color: #383b4f; /* Цвет текста */
+  background-color: #ffffff; /* Цвет фона белый*/
+  border-radius: 100px; /* Закругление углов */
+  border: 1.5px solid #383b4f; /* Граница кнопки (прозрачная, чтобы избежать артефактов) */
+  cursor: pointer; /* Указатель мыши */
+  transition: all 0.3s ease; /* Плавный переход при наведении */
   display: flex; /* Горизонтальное расположение содержимого */
-  align-items: center; /* Центрирование содержимого по вертикали */
-  gap: 10px; /* Отступ между текстом и иконкой */
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование содержимого */
+  opacity: 1; /* Прозрачность кнопки */
 }
 
 .btn-login .btn-icon {
-  width: 20px; /* Размер иконки */
-  height: 20px;
+  width: 20px; /* Ширина иконки */
+  height: 20px; /* Высота иконки */
   transition: all 0.3s ease;
 }
 
 .btn-login:hover .btn-icon {
-  content: url("/favicon/iconamoon_profile-bold.png"); /* Новая иконка при наведении */
+  content: url("/favicon/iconamoon_profile-bold-2.svg"); /* Новая иконка при наведении */
 }
 
 .btn-login:hover {
-  color: #655adc; /* Цвет текста при наведении */
+  opacity: 1; /* Делает кнопку видимой при наведении */
   border-color: #655adc; /* Цвет рамки при наведении */
+  color: #655adc; /* Цвет текста при наведении */
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .top-line {
-    flex-direction: column; /* Размещаем блоки вертикально */
-    align-items: center; /* Центрируем содержимое */
-    gap: 20px; /* Увеличенные отступы между блоками */
-  }
-
-  .menu-list {
-    flex-direction: column; /* Меню становится вертикальным */
-    align-items: center; /* Центрируем пункты меню */
-    gap: 15px; /* Уменьшенные отступы между пунктами */
-  }
-
-  .btn-login {
-    width: 106px; /* Ширина кнопки */
-    height: 44px; /* Высота кнопки */
-    padding: 10px 20px; /* Внутренние отступы */
-    gap: 12px; /* Расстояние между текстом и иконкой */
-    font-size: var(--font-size-xs); /* Размер текста */
-    font-family: "Open Sans", sans-serif; /* Шрифт */
-    color: #383b4f; /* Цвет текста */
-    background-color: #fff; /* Цвет фона */
-    border-radius: 100px 0px 0px 0px; /* Закругление углов */
-    border: 1.5px solid transparent; /* Граница кнопки (прозрачная, чтобы избежать артефактов) */
-    cursor: pointer; /* Указатель мыши */
-    transition: all 0.3s ease; /* Плавный переход при наведении */
-    display: flex; /* Горизонтальное расположение содержимого */
-    align-items: center; /* Центрирование по вертикали */
-    justify-content: center; /* Центрирование содержимого */
-    opacity: 0; /* Прозрачность кнопки */
-  }
-
-  .btn-login:hover {
-    opacity: 1; /* Делает кнопку видимой при наведении */
-    border-color: #655adc; /* Цвет рамки при наведении */
-    color: #655adc; /* Цвет текста при наведении */
-  }
-  /* Исправил высоту иконки с 20 на 24 */
-  .btn-login .btn-icon {
-    width: 24px; /* Ширина иконки */
-    height: 24px; /* Высота иконки */
-    transition: all 0.3s ease;
-  }
-
-  .btn-login:hover .btn-icon {
-    content: url("/favicon/iconamoon_profile-bold.png"); /* Новая иконка при наведении */
-  }
-
-  .logo-text {
-    font-size: var(--font-size-sm); /* Уменьшаем размер текста логотипа */
-  }
+.hero {
+  width: 106px; /* Ширина кнопки */
+  height: 44px; /* Высота кнопки */
+  content: url("/images/group-45.svg"); /* Новая рисунок вверху страницы */
+  display: flex; /* Горизонтальное расположение содержимого */
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование содержимого */
 }
 
-@media (max-width: 480px) {
-  .logo {
-    width: 20px;
-    height: 20px;
-  }
+.menu-list {
+  display: flex; /* Меню в строку */
+  list-style: none; /* Убираем маркеры списка */
+  margin: 0; /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+  gap: 15px; /* Уменьшенные отступы между пунктами */
+}
 
-  .logo-text {
-    font-size: var(--font-size-xs); /* Еще меньше размер текста логотипа */
-  }
-
-  .menu-list li a {
-    font-size: var(--font-size-xs); /* Уменьшаем размер текста меню */
-  }
-
-  .btn-login {
-    font-size: var(--font-size-sm);
-    padding: 8px 15px; /* Уменьшаем внутренние отступы кнопки */
-  }
+.menu-list li a {
+  font-size: var(--font-size-44); /* Размер текста */
+  font-weight: 700; /* Жирный текст */
+  color: #383b4f; /* Цвет текста */
+  transition: color 0.3s ease; /* Плавный переход цвета */
 }
