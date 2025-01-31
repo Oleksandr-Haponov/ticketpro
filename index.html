@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketPro</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,28 +19,31 @@
         <!-- Логотип -->
         <section class="logo-container">
           <img
-            src="/favicon/ticketpro-header-logo.svg"
+            src="./favicon/ticketpro-header-logo.svg"
             alt="TicketPro"
             class="logo logo-header"
           />
           <p class="logo-text">TicketPro</p>
         </section>
         <!-- Верхнє меню -->
-        <nav class="top-menu">
+        <nav class="top-menu" aria-label="Основне меню">
           <ul class="menu-list">
             <li>
-              <a href="/carrier.html" class="font-14">Перевізникам</a>
+              <a href="./carrier.html" class="font-14" aria-current="page"
+                >Перевізникам</a
+              >
             </li>
-            <li><a href="/agent.html" class="font-14">Агентам</a></li>
-            <li><a href="/news.html" class="font-14">Новини</a></li>
+            <li><a href="./agent.html" class="font-14">Агентам</a></li>
+            <li><a href="./news.html" class="font-14">Новини</a></li>
           </ul>
         </nav>
         <!-- Кнопка в Header -->
-        <button class="btn-login">
+        <button class="btn-login" aria-label="Вхід у систему">
           <img
-            src="/favicon/iconamoon_profile-bold.svg"
-            alt="іконка вхід"
+            src="./favicon/iconamoon_profile-bold.svg"
+            alt=""
             class="btn-icon"
+            aria-hidden="true"
           />
           Вхід
         </button>
@@ -51,7 +54,11 @@
     <main>
       <!-- Секція №1 -->
       <section class="hero">
-        <img src="/images/group-45.svg" alt="Автобус і ноутбук" />
+        <img
+          src="./images/group-45.svg"
+          alt="Автобус і ноутбук"
+          class="hero-image"
+        />
         <h1 class="font-44">
           Професійна CRM система для перевізників та агентів
         </h1>
@@ -64,12 +71,15 @@
       <section class="features">
         <ul class="feature-list">
           <li>
-            <img src="/images/group-47.svg" alt="Автобус і ноутбук" />
+            <img
+              src="./images/group-47.svg"
+              alt="Система керування перевезеннями"
+            />
             <h2 class="font-32">Керуйте перевезеннями</h2>
             <p class="font-16">Зручна система керування рейсами, автопарком</p>
           </li>
           <li>
-            <img src="/images/group-46.svg" alt="Автобус і ноутбук" />
+            <img src="./images/group-46.svg" alt="Система продажу квитків" />
             <h2 class="font-32">Продавайте квитки</h2>
             <p class="font-16">
               Велика мережа перевізників та зручна система продажів квитків
@@ -82,7 +92,10 @@
         <h2 class="font-44">Чому TicketPro?</h2>
         <ul class="reason-list">
           <li>
-            <img src="/images/group-45.svg" alt="Автобус і ноутбук" />
+            <img
+              src="./images/group-45.svg"
+              alt="Експертність у перевезеннях"
+            />
             <h3 class="font-24">Експертність</h3>
             <p class="font-16">
               Вже більше 15 років ми з’єднуємо перевізників, агентів та
@@ -90,7 +103,7 @@
             </p>
           </li>
           <li>
-            <img src="/images/group-45.svg" alt="Автобус і ноутбук" />
+            <img src="./images/group-45.svg" alt="Ефективне управління" />
             <h3 class="font-24">Ефективність</h3>
             <p class="font-16">
               Зібрали всі необхідні інструменти для ефективного управління в
@@ -98,14 +111,14 @@
             </p>
           </li>
           <li>
-            <img src="/images/group-45.svg" alt="Автобус і ноутбук" />
+            <img src="./images/group-45.svg" alt="Професійна команда" />
             <h3 class="font-24">Команда</h3>
             <p class="font-16">
               На вашому боці - команда професіоналів, що завжди на зв’язку
             </p>
           </li>
           <li>
-            <img src="/images/group-45.svg" alt="Автобус і ноутбук" />
+            <img src="./images/group-45.svg" alt="Універсальність послуг" />
             <h3 class="font-24">Універсальність</h3>
             <p class="font-16">
               Співпрацюємо з перевізникам та агентами незалежно від розміру
@@ -115,7 +128,7 @@
         </ul>
       </section>
       <!-- Секція SEO -->
-      <section class="seo-text">
+      <section class="seo-text" aria-hidden="true">
         <p class="font-12">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo
           illo ad, totam natus culpa laudantium quis iste dolorum quasi
@@ -129,7 +142,7 @@
     <footer class="footer">
       <section class="footer-logo">
         <img
-          src="/favicon/ticketpro-footer-logo.svg"
+          src="./favicon/ticketpro-footer-logo.svg"
           alt="TicketPro"
           class="logo logo-footer"
         />
@@ -137,22 +150,22 @@
       </section>
       <p class="font-12">Професійна CRM система для перевізників та агентів</p>
       <p class="font-12">&copy; TicketPro 2024. Всі права захищено.</p>
-      <nav class="footer-menu">
+      <nav class="footer-menu" aria-label="Футер меню">
         <ul class="menu-list">
-          <li><a href="/carrier.html" class="font-14">Перевізникам</a></li>
-          <li><a href="/agent.html" class="font-14">Агентам</a></li>
+          <li><a href="./carrier.html" class="font-14">Перевізникам</a></li>
+          <li><a href="./agent.html" class="font-14">Агентам</a></li>
           <li>
-            <a href="/public-offer-agreement.html" class="font-14"
+            <a href="./public-offer-agreement.html" class="font-14"
               >Договір публічної оферти</a
             >
           </li>
           <li>
-            <a href="/privacy-policy.html" class="font-14"
+            <a href="./privacy-policy.html" class="font-14"
               >Політика конфіденційності</a
             >
           </li>
-          <li><a href="/about.html" class="font-14">Про нас</a></li>
-          <li><a href="/contacts.html" class="font-14">Контакти</a></li>
+          <li><a href="./about.html" class="font-14">Про нас</a></li>
+          <li><a href="./contacts.html" class="font-14">Контакти</a></li>
         </ul>
       </nav>
     </footer>
